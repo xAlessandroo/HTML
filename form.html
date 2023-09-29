@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+  </head>
+  <body>
+    <form action="#">
+      <section id="user_id">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          required
+          pattern="[A-Za-z]+"
+          minlength="2"
+          maxlength="20"
+          autofocus
+        />
+        <br />
+        <label for="last_name">Last name:</label>
+        <input
+          type="text"
+          name="last_name"
+          required
+          pattern="[A-Za-z]+"
+          minlength="2"
+          maxlength="20"
+        />
+        <br />
+        <label for="birthday">Date of birth:</label>
+        <input type="date" name="birthday" /> <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="youremail@gmail.com"
+          required
+        /><br />
+        <label for="phone">Enter phone numer</label>
+        <input
+          type="tel"
+          name="phone"
+          pattern="[0-9]{9-10}"
+          placeholder="333 222 4444"
+          maxlength="10"
+          required
+        />
+      </section>
+      <fieldset>
+        <legend>Plans and payment method</legend>
+        <section id="plans">
+          <label for="plans">Select a plan</label>
+          <select name="plans" id="plans">
+            <option value="free">Free</option>
+            <option value="cheap">3,99$</option>
+            <option value="meidum">9,99$</option>
+            <option value="pricy">15,99$</option>
+            <input type="checkbox" name="pro_plan" />
+            <label for="pro_plan">Pro Plan (+5,99$)</label>
+          </select>
+        </section>
+        <section id="card_informations">
+          <label for="credit_card">Insert credit card:</label>
+          <input
+            type="number"
+            name="credit_card"
+            pattern="[0,9]{16}"
+            placeholder="5300xxxxxxxx1234"
+          />
+          <br />
+          <label for="cvc">CVC:</label>
+          <input
+            type="number"
+            name="cvc"
+            pattern="[0-9]{3}"
+            placeholder="123"
+          />
+          <br />
+          <label for="expiration">Expiration date:</label>
+          <input type="date" name="expiration" />
+          <br />
+          <label for="billing_address">Billing address:</label>
+          <input
+            type="text"
+            name="billing_address"
+            placeholder="xxx Street, 87"
+          />
+        </section>
+      </fieldset>
+
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
